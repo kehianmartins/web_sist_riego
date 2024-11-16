@@ -1,0 +1,103 @@
+h1 {
+text-align: center;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;               /* Disposición en fila de los elementos hijos */
+    min-height: 100vh;           /* Ocupa toda la altura de la ventana */
+    gap: 20px;                   /* Espacio entre el menú y el contenido */
+    padding: 20px;
+}
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+}
+
+.menu > li {
+    display: block;
+    position: relative; /* Permite posicionar los submenús de manera absoluta */
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: block;
+}
+
+/* Estilo para el submenú */
+.submenu-der {
+    display: none; /* Oculta el submenú por defecto */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    min-width: 180px; /* Asegura que el submenú tenga ancho suficiente */
+    z-index: 5; /* Asegura que el submenú aparezca por encima de otros elementos */
+}
+
+.submenu:hover .submenu-der {
+    display: block; /* Muestra el submenú cuando se pasa el ratón */
+}
+
+/* Estilos adicionales para el hover */
+.menu li:hover > a,
+.submenu-der li:hover > a {
+    background-color: #555;
+}
+
+.submenu-der li {
+    display: block;
+    width: 100%;
+}
+
+.content {
+    flex: 1;                     /* Ocupa todo el espacio disponible en el centro */
+    padding: 20px;
+    background-color: #fafafa;
+    border-radius: 5px;
+}
+
+.content h1 {
+    margin-bottom: 20px;
+}
+
+.content p {
+    line-height: 1.6;
+    color: #333;
+}
+.sidebar {
+    width: 200px; /* Ancho fijo para la columna derecha */
+    background-color: #333;
+    border-radius: 5px;
+    padding: 20px;
+    color: white;
+}
+.sidebar a {
+    color: white;
+}
+.sidebar h3 {
+    text-align: center;
+    font-weight: 500;
+     
+}
+
+.sidebar h2 {
+    margin-bottom: 15px;
+}
+
+.sidebar p {
+    line-height: 1.6;
+    color: #ffffff;
+}
