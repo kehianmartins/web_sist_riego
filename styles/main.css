@@ -153,6 +153,12 @@
     border-radius: 5px;
 }
 
+.contenido h1 {
+    font-family: "Roboto Slab";
+    font-weight: 400;
+    border-bottom: 1px solid black;
+}
+
 .contenido #titulo h1 {
     font-family: "Roboto Slab";
     font-weight: 400;
