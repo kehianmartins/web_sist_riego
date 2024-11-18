@@ -1,0 +1,295 @@
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url('../fonts/RobotoSlab-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto Serif';
+    src: url('../fonts/RobotoSerif-VariableFont_GRAD\,opsz\,wdth\,wght.ttf') format('truetype-variations');
+    font-weight: 100 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto Mono';
+    src: url('../fonts/RobotoMono-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/roboto/Roboto-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/roboto/Roboto-Bold.ttf') format('truetype');
+    font-weight: 700;
+    /* Bold */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/roboto/Roboto-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Elemento padre contenedor de todos los demás elementos */
+.contenedor {
+    display: flex;
+    min-height: 100vh;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+    /* Permite que los elementos se ajusten en varias filas */
+}
+
+/* - - - - MENÚ - - - - */
+.menu {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    width: 12em;
+    max-width: 250px;
+    border-radius: 5px;
+    list-style-type: none;
+    background-color: #0e3422;
+    height: 100vh;
+}
+
+.menu #logo {
+    text-align: center;
+    margin-bottom: 4em;
+}
+
+.menu>li {
+    display: block;
+    position: relative;
+}
+
+.menu a {
+    color: white;
+    font-family: "Roboto Serif", sans-serif;
+    text-align: center;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: block;
+}
+
+.menu #imagen-menu {
+    display: flex;
+    margin-top: auto;
+    justify-content: center;
+}
+
+.menu #imagen-menu img {
+    width: 11em;
+}
+
+/* --> Submenú */
+.submenu-der {
+    top: 100%;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    display: none;
+    position: absolute;
+    list-style-type: none;
+    background-color: #28865a;
+    border: 2px dashed grey;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    min-width: 12em;
+    z-index: 5;
+}
+
+.submenu:hover .submenu-der {
+    display: block;
+}
+
+/* Estilos para el hover */
+.menu li:hover>a,
+.submenu-der li:hover>a {
+    background-color: #4C7562;
+    border: 1px groove white;
+    padding: 13px 19px;
+}
+
+.submenu-der li {
+    display: block;
+    width: 100%;
+}
+
+/* - - - - CONTENIDO - - - - */
+
+.contenido {
+    flex: 1;
+    padding: 20px;
+    background-color: #eeebeb;
+    border-radius: 5px;
+}
+
+.contenido #titulo {
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+    background-color: #1E6946;
+    border-radius: 5px;
+}
+
+.contenido h1 {
+    font-family: "Roboto Slab";
+    font-weight: 400;
+    border-bottom: 1px solid white;
+}
+
+.contenido h2 {
+    font-family: "Roboto Slab";
+    font-style: italic;
+    font-weight: lighter;
+    font-size: large;
+    padding: 5px;
+}
+
+.contenido p {
+    font-size: 20px;
+    margin-top: 25px;
+    line-height: 2;
+}
+
+.contenido #boton {
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.contenido #boton a:hover {
+    background-color: #0e3422;
+}
+
+.contenido #boton a {
+    width: 350px;
+    padding: 30px;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 600;
+    border: 1px solid #0e3422;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #1E6946;
+    text-decoration: none;
+}
+
+
+/* - - - - BARRA LATERAL - - - -*/
+
+.sidebar {
+    min-width: 210px;
+    max-width: 230px;
+    background-color: #0e3422;
+    border-radius: 5px;
+    padding: 20px;
+    color: white;
+}
+
+.sidebar ul {
+    list-style-type: none;
+}
+
+.sidebar li {
+    margin-top: 1.2em;
+}
+
+.sidebar a {
+    color: white;
+    font-weight: bold;
+}
+
+.sidebar h2 {
+    margin-top: 1rem;
+    font-size: 1.5em;
+    font-weight: 600;
+    font-family: "Roboto Serif";
+    text-align: center;
+}
+
+.sidebar h3 {
+    margin-top: 1.8em;
+    font-size: 1.2em;
+    font-weight: bold;
+    font-family: "Roboto Serif";
+    text-align: center;
+    border-radius: 5px;
+}
+
+.sidebar p {
+    font-size: 1.1em;
+    margin-top: 0.8em;
+}
+
+.sidebar p {
+    line-height: 1.6;
+    color: #ffffff;
+}
+
+/* - - - - MEDIA QUERIES - - - - */
+
+@media (max-width: 768px) {
+    .contenedor {
+        flex-direction: column;
+        /* Cambia la dirección a columna en pantallas pequeñas */
+        padding: 10px;
+        /* Reduce el padding */
+    }
+
+    .sidebar {
+        width: 100%;
+        /* La barra lateral ocupa todo el ancho */
+        margin-bottom: 20px;
+        /* Espacio entre la barra lateral y el contenido */
+    }
+
+    .menu {
+        width: 100%;
+        /* El menú ocupa todo el ancho */
+    }
+
+    .contenido {
+        padding: 10px;
+        /* Reduce el padding en el contenido */
+    }
+}
+
+@media (max-width: 480px) {
+    .menu a {
+        padding: 10px;
+        /* Reduce el padding en los enlaces del menú */
+    }
+
+    .sidebar {
+        padding: 15px;
+        /* Reduce el padding en la barra lateral */
+    }
+
+    .contenido {
+        padding: 5px;
+        /* Reduce el padding en el contenido */
+    }
+}

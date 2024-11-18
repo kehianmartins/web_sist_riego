@@ -5,31 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema de Riego - UTU</title>
-    <link rel="stylesheet" href="styles/inicio.css">
+    <link rel="stylesheet" href="styles/main.css">
 </head>
 
 <body>
-    <div class="container">
+    <div class="contenedor">
         <nav class="menu">
-            <img src="img/1-Photoroom.png" alt="" width="150">
-
+            <div id="logo">
+                <img src="logotipo.svg" alt="" width="150">
+            </div>
             <ul class="menu">
-                <li> <a href="inicio.html">Inicio</a> </li>
-                
+                <li> <a href="inicio.html">Inicio   ←</a> </li>
+
                 <li class="submenu">
-                    <a href="#">Mediciones</a>
-                    <ul class="submenu-der">
-                        <li><a href="humedad.html">Mediciones actuales</a></li>
-                        <li><a href="materiales.html">Materiales</a></li>
-                    </ul>
+                    <a href="mediciones.html">Mediciones</a>
                 </li>
 
                 <li class="submenu">
                     <a href="#">Proyecto</a>
                     <ul class="submenu-der">
-                        <li><a href="#">Herramienta 1</a></li>
-                        <li><a href="#">Herramienta 2</a></li>
-                        <li><a href="#">Herramienta 3</a></li>
+                        <li><a href="materiales.html">Materiales</a></li>
+                        <li><a href="funcionamiento.html">Funcionamiento</a></li>
+                        <li><a href="paso_a_paso.html">Paso a Paso</a></li>
                     </ul>
                 </li>
 
@@ -37,21 +34,49 @@
 
                 <li> <a href="#">Contacto</a> </li>
             </ul>
-
+            <div id="imagen-menu">
+                <img src="img/img-rama-fotor-20241116231258.png" alt="">
+            </div>
         </nav>
-        <main class="content">
-            <h1>Bienvenidos</h1>
-            <p>Este es el contenido principal que aparecerá en el centro de la página.</p>
+        <main class="contenido">
+            <div id="titulo">
+                <h1>S. A. R. M. P</h1>
+                <h2>Sistema Automatizado de Riego y Monitoreo de Plantaciones</h2>
+            </div>
+            <p>
+                El riego es una de las prácticas agrícolas más fundamentales, y es primordial realizarlo adecuadamente. El agua, el recurso utilizado para concretar dicha actividad, es uno de los principales componentes necesarios para concretar la vida en nuestro planeta, es imprescindible en todos los procesos biológicos existentes. Y el riego tradicional a menudo enfrenta problemas a la hora de optimizar el uso de este vital recurso, en especial el desperdicio y la mala distribución. En este contexto, los sistemas de automatización de riego se han convertido en una tecnología revolucionaria, mejorando tanto la eficiencia a la hora de distribuir el recurso, como su uso en general.
+            </p>
+            <p>
+                Fue por esto, que decidimos concretar este proyecto de un sistema automatizado de riego y plantaciones. Y brindar al público toda la información necesaria para realizarlo por su cuenta, incluyendo su diseño, implementación y distintos conceptos.
+            </p>
+            <p>
+                Los datos obtenidos son abiertos al público, y las mediciones pueden ser obvservadas en tiempo real, junto a un historial de estadísticas recopiladas durante cierto período de tiempo. Puede acceder mediante el siguiente botón.
+            </p>
+            <div id="boton">
+                <a href="mediciones.html">Ir a las mediciones</a>
+            </div>
         </main>
+
         <aside class="sidebar">
-            <br>
-            <br>
-            <br> <br>
-            <h3>Preguntas frecuentes</h3>
-            <br>
-            <br>
-            <br>
-            <a href="funcionamiento.html">¿Cómo funciona?</a>
+            <h2>Preguntas frecuentes</h2>
+            <ul>
+                <li>
+                    <h3>¿Cómo funciona?</h3>
+                    <p>En nuestra sección sobre el <a href="funcionamiento.html">funcionamiento</a> del proyecto
+                        explicamos detalladamente como se logra la automatización.</p>
+                </li>
+                <li>
+                    <h3>¿Tienen estadísticas?</h3>
+                    <p>En nuestro sistema manejamos el uso de <a href="mediciones.html#estadísticas">estadísticas</a> de
+                        un máximo 3 meses anteriores.</p>
+                </li>
+                <li>
+                    <h3>¿Qué placa utilizan?</h3>
+                    <p>En este proyecto utilizamos una placa programable <b>ESP8266</b>. Puedes encontrar más
+                        información <a href="materiales.html#esp8266">aquí</a>.</p>
+                </li>
+                <li></li>
+            </ul>
         </aside>
     </div>
 
