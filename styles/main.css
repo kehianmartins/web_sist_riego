@@ -60,6 +60,37 @@ body {
     scrollbar-color: #0E3422 #12382633;
 }
 
+
+h1 {
+    font-family: "Roboto Slab";
+    font-weight: 400;
+    margin-left: 30px;
+}
+
+h2 {
+    font-family: "Roboto Slab";
+    font-style: italic;
+    font-weight: lighter;
+    font-size: large;
+    padding: 5px;
+    margin-left: 20px;
+}
+
+h3 {
+    font-family: "Roboto Slab", sans-serif;
+    font-weight: 400;
+}
+
+p {
+    font-family: "Roboto", sans-serif;
+    line-height: 2;
+}
+
+li {
+    font-family: "Roboto", sans-serif;
+    line-height: 2;
+}
+
 /* Elemento padre contenedor de todos los demás elementos */
 .contenedor {
     display: flex;
@@ -156,33 +187,23 @@ body {
     border-radius: 5px;
 }
 
-.contenido #titulo {
+.contenido .titulo {
     color: #ffffff;
-    text-align: center;
     margin-bottom: 20px;
     width: 100%;
     background-color: #1E6946;
+    border-radius: 2px;
+}
+
+.contenido .subtitulo {
+    background-color: #28865a;
     border-radius: 5px;
+    color: white;
+    font-weight: 700;
 }
 
-.contenido h1 {
-    font-family: "Roboto Slab";
-    font-weight: 400;
-    border-bottom: 1px solid black;
-}
-
-.contenido #titulo h1 {
-    font-family: "Roboto Slab";
-    font-weight: 400;
-    border-bottom: 1px solid white;
-}
-
-.contenido h2 {
-    font-family: "Roboto Slab";
-    font-style: italic;
-    font-weight: lighter;
-    font-size: large;
-    padding: 5px;
+.contenido .inicio {
+    text-align: center;
 }
 
 .contenido p {

@@ -1,50 +1,328 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto</title>
-    <link rel="stylesheet" href="styles/proyecto.css">
+    <title>Paso a Paso - S.A.R.M.P</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/paso_a_paso.css">
 </head>
+
 <body>
-    <div class="container">
+    <div class="contenedor">
         <nav class="menu">
-            <img src="1-Photoroom.png" alt="" width="150">
+            <div id="logo">
+                <img src="img/logotipo.svg" alt="" width="150">
+            </div>
             <ul class="menu">
-                <li><a href="inicio.html">Inicio</a></li>
+                <li> <a href="inicio.html">Inicio</a> </li>
+
                 <li class="submenu">
-                    <a href="#">Mediciones</a>
+                    <a href="mediciones.html">Mediciones</a>
+                </li>
+
+                <li class="submenu">
+                    <a href="#">Proyecto</a>
                     <ul class="submenu-der">
-                        <li><a href="humedad.html">Mediciones actuales</a></li>
                         <li><a href="materiales.html">Materiales</a></li>
+                        <li><a href="funcionamiento.html">Funcionamiento</a></li>
+                        <li><a href="paso_a_paso.html">Paso a Paso ←</a></li>
                     </ul>
                 </li>
-                <li class="submenu">
-                    <a href="#">Herramientas</a>
-                    <ul class="submenu-der">
-                        <li><a href="#">Herramienta 1</a></li>
-                        <li><a href="#">Herramienta 2</a></li>
-                        <li><a href="#">Herramienta 3</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Contacto</a></li>
+
+                <li> <a href="faq.html">FAQ</a> </li>
+
+                <li> <a href="contacto.html">Contacto</a> </li>
             </ul>
-            
+            <div id="imagen-menu">
+                <img src="img/img-rama-fotor-20241116231258.png" alt="">
+            </div>
         </nav>
-        <main class="content">
-            <h1>Bienvenidos</h1>
-            <p>Este es el contenido principal que aparecerá en el centro de la página.</p>
+        <main class="contenido">
+            <div class="titulo">
+                <h1>Paso a Paso</h1>
+            </div>
+            <div class="subtitulo">
+                <h2>Diseño del Sistema.</h2>
+            </div>
+            <div class="tarjetas-container">
+                <div class="tarjeta inicial">
+                    <div class="tarjeta-titulo">
+                        <h3>Componentes del sistema</h3>
+                    </div>
+                    <div class="tarjeta-contenido">
+                        <ul>
+                            <li>
+                                <b><u>Microcontrolador:</u></b><br>
+                                ESP8266 (WiFi integrado).
+                            </li>
+                            <li>
+                                <b><u>Sensores:</u></b>
+                                <ul>
+                                    <li>
+                                        DHT22: Mide temperatura y humedad del aire.
+                                    </li>
+                                    <li>
+                                        YL-69 (YL-38 con sonda): Mide humedad del suelo.
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <b><u>Actuadores:</u></b>
+                                <ul>
+                                    <li>
+                                        Módulo relé: Controla la bomba de agua.
+                                    </li>
+                                    <li>
+                                        Bomba de agua pequeña: Activa el riego.
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <b><u>Conexiones:</u></b><br>
+                                Fuente de alimentación adecuada para el ESP8266 y la bomba.
+                            </li>
+                            <li>
+                                <b><u>Comunicación:</u></b><br>
+                                WiFi para enviar datos al servidor y recibir órdenes.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tarjeta inicial">
+                    <div class="tarjeta-titulo">
+                        <h3>Diseño de conexiones físicas</h3>
+                    </div>
+                    <div class="tarjeta-contenido">
+                        <p>
+                        <ul>
+                            <li>
+                                <b><u>DHT22</u></b>
+                                <ul>
+                                    <li><b>VCC: </b>3.3V</li>
+                                    <li><b>GND: </b>GND</li>
+                                    <li><b>Data:</b> Conectar a un GPIO del ESP8266 (por ejemplo, D4).</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <b><u>YL-69</u></b>
+                                <ul>
+                                    <li><b>VCC: </b> 3.3V</li>
+                                    <li><b>GND: </b> GND</li>
+                                    <li><b>AO: </b> Conectar a un pin analógico (A0 en el ESP8266).</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <b><u>Módulo Relé y Bomba</u></b>
+                                <ul>
+                                    <li><b>Relé IN: </b>Conectar a un GPIO (por ejemplo, D5).</li>
+                                    <li><b>VCC y GND del relé: </b>Conectar al ESP8266.</li>
+                                    <li>La bomba se conecta a la salida del relé, con su propia fuente de alimentación.
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subtitulo">
+                <h2>Implementación Física.</h2>
+            </div>
+            <div class="tarjetas-container">
+                <div class="tarjeta-grande">
+                    <div class="seccion">
+                        <h3>Montaje de los sensores</h3>
+                        <p>Asegúrate de conectar correctamente el DHT22 y el YL-69 al ESP8266. Verifica las conexiones
+                            de los pines VCC, GND y Data/AO según el diseño establecido.</p>
+                    </div>
+                    <div class="separador"></div>
+                    <div class="seccion">
+                        <h3>Conexión del relé</h3>
+                        <p>Conecta la señal IN del relé al GPIO configurado (D5). Asegúrate de que la bomba y su fuente
+                            de alimentación estén conectadas de forma segura al relé.</p>
+                    </div>
+                    <div class="separador"></div>
+                    <div class="seccion">
+                        <h3>Prueba de conexiones</h3>
+                        <p>Verifica todas las conexiones con un multímetro. Realiza pruebas individuales de los sensores
+                            y el relé para asegurar su correcto funcionamiento antes de la implementación final.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subtitulo">
+                <h2>Programación del Sistema.</h2>
+            </div>
+            <div class="tarjetas-container">
+                <div class="tarjeta-grande codigo">
+                    <div class="seccion">
+                        <h3>Librerías necesarias</h3>
+                        <ul>
+                            <li>Adafruit_Sensor y DHT para el DHT22.</li>
+                            <li>ESP8266WiFi y ESP8266HTTPClient para la comunicación WiFi.</li>
+                        </ul>
+                    </div>
+                    <div class="separador"></div>
+                    <div class="seccion">
+                        <h3>Código base</h3>
+                        <h4>Inicialización:</h4>
+                        <ul>
+                            <li>Configura los pines para el DHT22, el YL-69 y el relé.</li>
+                            <li>Conecta el ESP8266 a tu red WiFi (WIFI SALON 13).</li>
+                        </ul>
+                        <h4>Lógica de riego:</h4>
+                        <ul>
+                            <li>Lee los valores del DHT22 y el YL-69.</li>
+                            <li>Si la humedad del suelo está por debajo de un umbral, activa la bomba a través del relé.
+                            </li>
+                        </ul>
+                        <h4>Envío de datos:</h4>
+                        <ul>
+                            <li>Envía los datos al servidor mediante HTTP POST o GET.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bloque-codigo">
+                <div class="bloque-codigo-titulo">
+                    <h3>Código C++ (Arduino IDE)</h3>
+                </div>
+                <div class="bloque-codigo-contenido">
+                    <pre><code>
+        #include <ESP8266WiFi.h>
+        #include &lt;DHT.h&gt;
+        #include &lt;ESP8266WiFi.h&gt;
+        #include &lt;ESP8266HTTPClient.h&gt;
+        
+        #define DHTPIN D4
+        #define DHTTYPE DHT22
+        #define SOILPIN A0
+        #define RELAYPIN D5
+        
+        const char* ssid = "WIFI SALON 13";
+        const char* password = "tu_password";
+        const char* server = "http://tu_servidor.com/endpoint";
+        
+        DHT dht(DHTPIN, DHTTYPE);
+        
+        void setup() {
+            Serial.begin(115200);
+            WiFi.begin(ssid, password);
+            while (WiFi.status() != WL_CONNECTED) {
+            delay(500);
+            Serial.print(".");
+            }
+            Serial.println("Conectado a WiFi");
+            dht.begin();
+            pinMode(RELAYPIN, OUTPUT);
+            digitalWrite(RELAYPIN, HIGH); // Relé apagado por defecto
+        }
+        
+        void loop() {
+            float temp = dht.readTemperature();
+            float hum = dht.readHumidity();
+            int soilMoisture = analogRead(SOILPIN);
+        
+            // Lógica de riego
+            if (soilMoisture &lt; 500) { // Umbral ajustable
+            digitalWrite(RELAYPIN, LOW); // Encender bomba
+            } else {
+            digitalWrite(RELAYPIN, HIGH); // Apagar bomba
+            }
+        
+            // Envío de datos al servidor
+            if (WiFi.status() == WL_CONNECTED) {
+            WiFiClient client;
+            HTTPClient http;
+            http.begin(client, server);
+            http.addHeader("Content-Type", "application/json");
+        
+            String payload = "{\"temp\":" + String(temp) +
+                                ",\"hum\":" + String(hum) +
+                                ",\"soil\":" + String(soilMoisture) + "}";
+            int httpResponseCode = http.POST(payload);
+            Serial.println("Enviado: " + payload);
+            http.end();
+            }
+        
+            delay(30000); // Leer cada 30 segundos
+        }
+                    </code></pre>
+                </div>
+            </div>
+            
+
+            <div class="subtitulo">
+                <h2>Configuración del Servidor Web</h2>
+            </div>
+            <div class="tarjetas-container">
+                <div class="tarjetas-container">
+                    <div class="tarjeta-grande codigo">
+                        <div class="seccion">
+                            <h3>Backend</h3>
+                            <h4>Lenguaje</h4>
+                            <p>Utiliza el lenguaje de preferencia. En nuestro caso, <b>PHP</b>.</p>
+                            <h4>Base de Datos</h4>
+                            <p>Utiliza el servidor de Base de Datos de preferencia. En nuestro caso <b>MySQL</b>.</p>
+                            <h4>API</h4>
+                            <p>Configura un endpoint (punto final) para recibir los datos (por ejemplo,
+                                <code>tu_url/endpoint)</code>
+                            </p>
+                        </div>
+                        <div class="separador"></div>
+                        <div class="seccion">
+                            <h3>Frontend</h3>
+                            <h4>Interfaz web</h4>
+                            Utiliza el framework que desees. En nuestro caso solamente utilizamos HTML y CSS nativo.
+                            <h4>Gráficas</h4>
+                            <p>Como bien se puede ver en este sitio, se utilizo una libreria de JS llamada Chart.js. DE
+                                gran utilidad para mostrar gráficas como en este caso de temperatura, humedad y humedad
+                                del suelo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bloque-codigo">
+                <div class="bloque-codigo-titulo">
+                    <h3>Código PHP</h3>
+                </div>
+                <div class="bloque-codigo-contenido">
+                    <pre><code>
+    &lt;?php
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $data = json_decode(file_get_contents('php://input'), true);
+        $temp = $data['temp'];
+        $hum = $data['hum'];
+        $soil = $data['soil'];
+
+        // Conexión a la base de datos
+        $conn = new mysqli('localhost', 'usuario', 'contraseña', 'base_datos');
+        if ($conn-&gt;connect_error) die("Conexión fallida: " . $conn-&gt;connect_error);
+
+        $sql = "INSERT INTO datos_riego (temperatura, humedad, humedad_suelo) VALUES ($temp, $hum, $soil)";
+        if ($conn-&gt;query($sql) === TRUE) {
+            echo "Datos almacenados correctamente.";
+        } else {
+            echo "Error: " . $sql . "&lt;br&gt;" . $conn-&gt;error;
+        }
+        $conn-&gt;close();
+    }
+    ?&gt;
+
+                    </code></pre>
+                </div>
+            </div>
         </main>
-        <aside class="sidebar">
-            <br>
-            <br>
-            <br> <br> 
-            <h3>Preguntas frecuentes</h3>
-            <br>
-            <br>
-            <br>
-                        <a href="funcionamiento.html">¿Cómo funciona?</a>
-        </aside>
-    
+    </div>
+    <footer class="pie-pagina">
+        <p>&copy; 2024 2BH Informática, alumnos Kehian Martins, Mateo Parentini, Bernardo Arregín. Todos los derechos
+            reservados.</p>
+    </footer>
 </body>
+
 </html>
