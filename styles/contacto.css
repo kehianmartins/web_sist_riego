@@ -1,0 +1,88 @@
+.contenido #email {
+    color: #0e3422;
+}
+.frm-contacto {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+  }
+  
+  .frm-contacto h2 {
+    padding-bottom: 20px;
+  }
+  
+  .frm-contacto label {
+    font-weight: bold;
+    color: white;
+  }
+  
+  .frm-contacto form {
+    width: 700px;
+    height: 500px;
+    border: 2px solid #0e3422;
+    text-align: start;
+    border-radius: 4px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(300deg,#4dab38,#56754f,#1e6946,#0e3422,#38282b);
+    background-size: 300% 300%;
+    animation: gradient-animation 30s ease infinite;
+    gap: 20px;
+  }
+  
+  
+  /* Extraido de https://animated-gradient-background-generator.netlify.app*/
+  
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .frm-botones input{
+    padding: 10px;
+    width: 250px;
+    background-color: #1e694654;
+    color: white;
+    font-weight: bold;
+    border: none;
+  }
+
+  .frm-botones {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+  }
+
+  .frm-botones input {
+    background-color: #0e3422;
+    border: 1px solid white;
+    border-radius: 5px;
+  }
+  
+  .frm-contacto textarea {
+    height: 80px;
+    width: 100%;
+  }
+  
+  .frm-contacto .campos-texto.primero {
+    height: 30px;
+  }
+  
+  .frm-contacto .campos-texto {
+    color: white;
+    background-color: rgba(27, 30, 68, 0.1);
+    border: none;
+    border-bottom: 2px solid rgba(243, 230, 230, 0.801);
+  }
+  
+  

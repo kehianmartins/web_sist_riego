@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - S.A.R.M.P</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/contacto.css">
+</head>
+
+<body>
+    <div class="contenedor">
+        <nav class="menu">
+            <div id="logo">
+                <img src="img/logotipo.svg" alt="" width="150">
+            </div>
+            <ul class="menu">
+                <li> <a href="inicio.html">Inicio←</a> </li>
+
+                <li class="submenu">
+                    <a href="mediciones.html">Mediciones</a>
+                </li>
+
+                <li class="submenu">
+                    <a href="#">Proyecto</a>
+                    <ul class="submenu-der">
+                        <li><a href="materiales.html">Materiales</a></li>
+                        <li><a href="funcionamiento.html">Funcionamiento</a></li>
+                        <li><a href="paso_a_paso.html">Paso a Paso</a></li>
+                    </ul>
+                </li>
+
+                <li> <a href="faq.html">FAQ</a> </li>
+
+                <li> <a href="contacto.html">Contacto</a> </li>
+            </ul>
+            <div id="imagen-menu">
+                <img src="img/img-rama-fotor-20241116231258.png" alt="">
+            </div>
+        </nav>
+        <main class="contenido">
+            <h1>Contacto</h1>
+            <p>El proyecto posee un correo electrónico oficial donde usted puede contactarnos para cualquier duda, dicho correo es: <b id="email">proyecto.riego.utu@gmail.com</b></p>
+            <p>De cualquier manera, en este formulario usted puede contactarnos para cualquier consulta. Rellene todos los campos.</p>
+            <section class="frm-contacto">
+                <form action="">
+                    <label for="nombre">Nombre.</label>
+                    <input type="text" id="nombre" placeholder="Ingrese su nombre" class="campos-texto primero">
+                    <br>
+                    <label for="email">Email.</label>
+                    <input type="email" id="email" placeholder="Ingrese su email" class="campos-texto primero">
+                    <br>
+                    <label for="mensaje">Mensaje.</label>
+                    <textarea name="area_texto" id="mensaje" placeholder="Ingrese un mensaje" class="campos-texto"></textarea>
+                    <div class="frm-botones">
+                        <input type="submit" value="Enviar" id="btn">
+                        <input type="reset" value="Limpiar" id="btn">
+                    </div>
+                </form>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
