@@ -39,7 +39,6 @@ const grafica7Dias = new Chart(
     config7Dias
 );
 
-// Repite el proceso para el último mes y los últimos 3 meses
 const datosMes = {
     labels: ['Semana 1', 'Semana 2', 'Semana 3', 'Semana 4'],
     datasets: [

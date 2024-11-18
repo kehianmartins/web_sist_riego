@@ -91,14 +91,13 @@ li {
     line-height: 2;
 }
 
-/* Elemento padre contenedor de todos los demás elementos */
+/* es el elemento padre contenedor de todos los demas elementos */
 .contenedor {
     display: flex;
     min-height: 100vh;
     gap: 20px;
     padding: 20px;
     flex-wrap: wrap;
-    /* Permite que los elementos se ajusten en varias filas */
 }
 
 /* - - - - MENÚ - - - - */
@@ -165,7 +164,6 @@ li {
     display: block;
 }
 
-/* Estilos para el hover */
 .menu li:hover>a,
 .submenu-der li:hover>a {
     background-color: #4C7562;
@@ -295,60 +293,11 @@ li {
 
 .pie-pagina {
     background-color: #0e3422;
-    /* Ajusta este color para que coincida con tu esquema de colores */
     color: #ffffff;
-    /* Ajusta este color para que coincida con tu esquema de colores */
     padding: 20px 0;
     text-align: center;
     font-size: 14px;
     font-family: 'Roboto', sans-serif;
-    /* Asegúrate de que esta fuente coincida con la del resto del sitio */
     margin-top: 30px;
     border-top: 3px solid #030d08;
-    /* Ajusta este color para que coincida con tu esquema de colores */
-}
-
-/* - - - - MEDIA QUERIES - - - - */
-
-@media (max-width: 768px) {
-    .contenedor {
-        flex-direction: column;
-        /* Cambia la dirección a columna en pantallas pequeñas */
-        padding: 10px;
-        /* Reduce el padding */
-    }
-
-    .sidebar {
-        width: 100%;
-        /* La barra lateral ocupa todo el ancho */
-        margin-bottom: 20px;
-        /* Espacio entre la barra lateral y el contenido */
-    }
-
-    .menu {
-        width: 100%;
-        /* El menú ocupa todo el ancho */
-    }
-
-    .contenido {
-        padding: 10px;
-        /* Reduce el padding en el contenido */
-    }
-}
-
-@media (max-width: 480px) {
-    .menu a {
-        padding: 10px;
-        /* Reduce el padding en los enlaces del menú */
-    }
-
-    .sidebar {
-        padding: 15px;
-        /* Reduce el padding en la barra lateral */
-    }
-
-    .contenido {
-        padding: 5px;
-        /* Reduce el padding en el contenido */
-    }
 }
