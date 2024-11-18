@@ -15,7 +15,6 @@ body {
 }
 
 h1 {
-    text-align: center;
     color: #333;
 }
 
@@ -54,4 +53,8 @@ h1 {
 
 .pregunta-faq:hover {
     text-decoration: underline;
+}
+
+.contacto a {
+    color: #1E6946;
 }
