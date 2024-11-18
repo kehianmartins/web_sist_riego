@@ -42,7 +42,9 @@
         </nav>
 
         <main class="contenido">
-            <h1>Mediciones Actuales</h1>
+            <div class="titulo">
+                <h1>Mediciones Actuales</h1>
+            </div>
             <p>Mediciones en tiempo real de los sensores integrados de humedad, temperatura y humedad del suelo.</p>
             <div class="container">
                 <div class="carta">
@@ -59,16 +61,26 @@
                 </div>
             </div>
 
-            <h1 class="estadisticas">Estadísticas</h1>
-            <h2>Semanal</h2>
+            <div class="subtitulo">
+                <h2>
+                    Estadísticas
+                </h2>
+            </div>
+            <h3>Semanal</h3>
+            <hr>
             <canvas id="grafica7Dias" width="400" height="200"></canvas>
-            <h2>Mensual</h2>
+            <h3>Mensual</h3>
+            <hr>
             <canvas id="graficaMes" width="400" height="200"></canvas>
-            <h2>Historial a 3 meses</h2>
+            <h3>Historial a 3 meses</h3>
+            <hr>
             <canvas id="grafica3Meses" width="400" height="200"></canvas>
             <script src="script.js"></script>
         </main>
     </div>
+    <footer class="pie-pagina">
+        <p>&copy; 2024 2BH Informática, alumnos Kehian Martins, Mateo Parentini, Bernardo Arregín. Todos los derechos reservados.</p>
+    </footer>
 </body>
 
 </html>

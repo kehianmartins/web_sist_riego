@@ -1,60 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Preguntas</title>
+    <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/funcionamiento.css">
 </head>
+
 <body>
-    <div class="container">
+    <div class="contenedor">
         <nav class="menu">
-            <img src="1-Photoroom.png" alt="" width="150">
+            <img src="img/logotipo.svg" alt="" width="150">
 
             <ul class="menu">
                 <li><a href="inicio.html">Inicio</a></li>
                 <li class="submenu">
-                    <a href="#">Mediciones</a>
-                    <ul class="submenu-der">
-                        <li><a href="humedad.html">Mediciones actuales</a></li>
-                        <li><a href="materiales.html">Materiales</a></li>
-                    </ul>
+                    <a href="mediciones.html">Mediciones</a>
+
                 </li>
                 <li class="submenu">
-                    <a href="#">Herramientas</a>
+                    <a href="#">Proyecto</a>
                     <ul class="submenu-der">
-                        <li><a href="#">Herramienta 1</a></li>
-                        <li><a href="#">Herramienta 2</a></li>
-                        <li><a href="#">Herramienta 3</a></li>
+                        <li><a href="materiales.html">Materiales</a></li>
+                        <li><a href="funcionamiento.html">Funcionamiento</a></li>
+                        <li><a href="paso_a_paso.html">Paso a Paso</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Contacto</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
             </ul>
-            
+
         </nav>
-        <main class="content">
-            <h1>Bienvenidos</h1>
-            <p>Este es el contenido principal que aparecerá en el centro de la página.</p>
+        <main class="contenido">
+            <div class="titulo">
+                <h1>Funcionamiento</h1>
+            </div>
+            <p>Aquí puedes encontrar de forma detallada como funciona el sistema de riego. Si necesita más información,
+                <a href="contacto.html">Contactenos</a></p>
             <div class="contenedor">
-                <div class="caja">¿Como funciona?
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In, optio? Non est, autem minus quod iste quibusdam adipisci voluptatem, aliquid nostrum iusto ut repellat magni enim quaerat dolorem fugit nihil?</p>
+                <div class="caja">
+                    <div class="titulo-caja">
+                        <h2>¿Como funciona?</h2>
+                    </div>
+                    <p> <br>
+                        El proyecto mide la humedad con un sensor conectado a la ESP8266, que procesa los datos y los
+                        envía a esta pagina web usando Wi-Fi. Basándose en esos datos, se pueden automatizar acciones
+                        como activar riegos o enviar alertas. El sistema opera de forma continua, monitoreando y
+                        actuando según sea necesario.</p>
                 </div>
-                <div class="caja">Caja 2
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim sit nemo aspernatur voluptatem asperiores rem. Aliquid sint dolorem reprehenderit tenetur. Quibusdam impedit rem praesentium est! Beatae magni facilis aperiam excepturi!</p>
+                <div class="caja">
+                    <div class="titulo-caja">
+                        <h2>¿Cómo se alimenta el sistema completo?</h2>
+                    </div>
+                    <p><br>La ESP8266 puede alimentarse con una fuente de 5V o 3.3V, dependiendo de su versión. Pero
+                        optamos por una fuente de poder de 12V. Se puede usar un adaptador USB, una batería recargable,
+                        o incluso una fuente de energía solar para proyectos autónomos. </p>
                 </div>
-                <div class="caja">Caja 3
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur similique minus reiciendis rerum dicta, dolorem, officiis ipsum accusantium accusamus cupiditate id assumenda ipsa laudantium repellendus. Alias iste harum maxime sit!</p>
+                <div class="caja">
+                    <div class="titulo-caja">
+                        <h2>¿Cómo se calibran los valores del sensor de humedad?</h2>
+                    </div>
+                    <p><br>La calibración se realiza comparando las lecturas del sensor con mediciones de referencia
+                        conocidas, ajustando los valores en el código para que sean más precisos. En nuestro caso se los
+                        calibró por programacion en Arduino IDE</p>
                 </div>
-                <div class="caja">Caja 4
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi quisquam rerum expedita dolorum dolor necessitatibus recusandae illo perspiciatis, pariatur atque maxime sequi nemo ab, molestias fugit deserunt perferendis totam error.</p>
+                <div class="caja">
+                    <div class="titulo-caja">
+                        <h2>¿Qué sucede si la conexión Wi-Fi falla?</h2>
+                    </div>
+                    <p><br>En caso de una falla en la conexión Wi-Fi, la ESP8266 puede almacenar temporalmente los datos
+                        en su memoria y enviarlos cuando la conexión se restablezca. También puedes configurar una red
+                        secundaria como respaldo.</p>
                 </div>
-                <div class="caja">Caja 5
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam hic suscipit tempore sapiente impedit dolor ea nobis non doloremque enim voluptate, at inventore animi exercitationem minima, quas ex qui voluptatem?</p>
+                <div class="caja">
+                    <div class="titulo-caja">
+                        <h2>¿Es posible activar dispositivos basándose en los datos del sensor?</h2>
+                    </div>
+                    <p><br>Sí, puedes configurar la ESP8266 para que controle relés, bombas de agua o sistemas de riego
+                        automático en función de los niveles de humedad detectados por el sensor.</p>
                 </div>
-                <div class="caja">Caja 6 
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit consequuntur perspiciatis cumque ipsam, explicabo impedit quidem laudantium eius commodi, saepe tenetur? Commodi ullam quos rerum cumque, minima culpa cupiditate soluta?</p>
+                <div class="caja">
+                    <div class="titulo-caja">
+                        <h2>¿Qué tan precisa es la lectura del sensor de humedad en este proyecto?</h2>
+                    </div>
+                    <p><br>La precisión depende del sensor utilizado. En nuestro caso es el DHT22 con una muy buena
+                        precison con un ±2%. Además, la precisión puede mejorar si se realizan calibraciones adecuadas y
+                        se minimizan interferencias externas.</p>
                 </div>
             </div>
         </main>
+    </div>
+    <footer class="pie-pagina">
+        <p>&copy; 2024 2BH Informática, alumnos Kehian Martins, Mateo Parentini, Bernardo Arregín. Todos los derechos reservados.</p>
+    </footer>
 </body>
+
 </html>
